@@ -7,7 +7,7 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -19,6 +19,5 @@
     "vite": "^7.1.11",
     "vite-plugin-vue-devtools": "^8.0.3"
   },
-"packageManager": "yarn@4.10.3"
-
+  "packageManager": "yarn@4.10.3"
 }
