@@ -1,6 +1,11 @@
-<script setup></script>
+<script setup>
+import TitluCod from './ParolaUitataCod/TitluCod.vue';
+import InputCode from './ParolaUitataCod/InputCode.vue';
+import ContinueButton from '../ConectareInregistrare/ConnectComponents/ContinueButton.vue'; 
+</script>
 
 <template>
-    <h1>Titlul
-    </h1>
+    <TitluCod />
+    <InputCode />
+    <ContinueButton />
 </template>

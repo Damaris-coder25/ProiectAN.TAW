@@ -1,6 +1,11 @@
-<script setup></script>
+<script setup>
+import EmailInput from '../ConectareInregistrare/ConnectComponents/EmailInput.vue';
+import Titlu from './ParolaUitataComponents/Titlu.vue';
+import TrimiteCod from './ParolaUitataComponents/TrimiteCod.vue';
+</script>
 
 <template>
-    <h1>Titlul
-    </h1>
+    <Titlu />
+    <EmailInput />
+    <TrimiteCod />
 </template>

@@ -2,6 +2,7 @@
 import PageTitle from './ConnectComponents/PageTitle.vue'
 import ConnectButton from './ConnectComponents/ConnectButton.vue'
 import EmailInput from './ConnectComponents/EmailInput.vue'
+import ContinueButton from './ConnectComponents/ContinueButton.vue'
 
 </script>
 
@@ -16,6 +17,10 @@ import EmailInput from './ConnectComponents/EmailInput.vue'
   <hr>
   <br>
   <EmailInput />
+  <ContinueButton />
+  <br>
+  <br>
+  <br>
 </template>
 
 <style>

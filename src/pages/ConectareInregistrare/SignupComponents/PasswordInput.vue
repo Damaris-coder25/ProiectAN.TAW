@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const emailInput = ref('');
+const passwordInput = ref('');
 
 function handleInput(event) {
   console.log('You typed: ' + event.target.value);
@@ -11,12 +11,12 @@ function handleInput(event) {
 <template>
     <div class="text-center mt-5">
       <br>
-        <p class="font-bold">Email</p>
+        <p class="font-bold">Parola</p>
       <br>
-    <input type="email" 
-        v-model="emailInput" 
+    <input type="password" 
+        v-model="passwordInput" 
         @input="handleInput" 
-        placeholder="Introdu email-ul..."
+        placeholder="Introdu parola..."
         class="w-70 h-10  px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
     </div>
 </template>

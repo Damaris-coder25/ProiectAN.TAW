@@ -6,10 +6,10 @@ import NonexistentAccount from '@/pages/ConectareInregistrare/NonexistentAccount
 import Signup from '@/pages/ConectareInregistrare/Signup.vue'
 import Politica from '@/pages/ConectareInregistrare/Politica.vue'
 import Termeni from '@/pages/ConectareInregistrare/Termeni.vue'
-/*import ParolaUitata from '@/pages/Parola/ParolaUitata.vue'
+import ParolaUitata from '@/pages/Parola/ParolaUitata.vue'
 import ParolaUitataCod from '@/pages/Parola/ParolaUitataCod.vue'
 import ParolaNoua from '@/pages/Parola/ParolaNoua.vue'
-import ParolaNouaSucces from '@/pages/Parola/ParolaNouaSucces.vue'*/
+/*import ParolaNouaSucces from '@/pages/Parola/ParolaNouaSucces.vue'*/
 import Meniu from '@/pages/Meniu/Meniu.vue'
 /*import Programari from '@/Programari/Programari.vue'
 import Gata from '@/Programari/Gata.vue'
@@ -29,10 +29,10 @@ const routes = [
 { path: "/Signup", component: Signup },
 { path: "/Politica", component: Politica },
 { path: "/Termeni", component: Termeni },
-/*{ path: "/", component: ParolaUitata },
-{ path: "/", component: ParolaUitataCod },
-{ path: "/", component: ParolaNoua },
-{ path: "/", component: ParolaNouaSucces },*/
+{ path: "/ParolaUitata", component: ParolaUitata },
+{ path: "/ParolaUitataCod", component: ParolaUitataCod },
+{ path: "/ParolaNoua", component: ParolaNoua },
+/*{ path: "/", component: ParolaNouaSucces },*/
 { path: "/Meniu", component: Meniu }
 /*{ path: "/", component: Programari },
 { path: "/", component: Gata },
