@@ -1,5 +1,12 @@
 <script setup>
 import ConnectIcon from './ConnectIcon.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goToPickAccount = () => {
+  router.push("/PickAccount")
+}
 
 const props = defineProps(['app'])
 
@@ -21,7 +28,7 @@ const filteredIcons = computed(() =>
 <template>
     <div class="text-center mt-5">
         <button 
-            @click="console.log(`You pressed the ${props.app} button!`)"
+            @click="goToPickAccount"
             class=" w-72 h-12 px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
             <ConnectIcon
             v-for="(item,index) in filteredIcons"

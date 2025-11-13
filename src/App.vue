@@ -5,11 +5,8 @@
     <header>
         <nav>
             <RouterLink to="/">Conectare</RouterLink>
-            <RouterLink to="/">Alege contul</RouterLink>
-            <RouterLink to="/">Cont inexistent</RouterLink>
-            <RouterLink to="/">Inregistrare</RouterLink>
-            <RouterLink to="/">Politica de confidentialitate</RouterLink>
-            <RouterLink to="/">Termeni si conditii</RouterLink>
+            <RouterLink to="/Politica">Politica de confidentialitate</RouterLink>
+            <RouterLink to="/Termeni">Termeni si conditii</RouterLink>
 
         </nav>
     </header>

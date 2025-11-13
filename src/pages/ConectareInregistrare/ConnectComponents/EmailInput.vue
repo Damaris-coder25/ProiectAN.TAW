@@ -13,8 +13,7 @@ function handleInput(event) {
       sau
       <br>
       <br>
-      Email
-      <br>
+        <p class="font-bold">Email</p>
       <br>
     <input type="email" 
         v-model="emailInput" 
