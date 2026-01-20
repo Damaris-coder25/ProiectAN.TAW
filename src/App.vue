@@ -4,11 +4,7 @@
 <template>
     <header>
         <nav>
-            <RouterLink to="/">Conectare</RouterLink>
-            <RouterLink to="/Politica">Politica de confidentialitate</RouterLink>
-            <RouterLink to="/Termeni">Termeni si conditii</RouterLink>
-            <RouterLink to="/ParolaUitata">Parola uitata</RouterLink>
-
+            <RouterLink to="/"></RouterLink>
         </nav>
     </header>
     <RouterView />

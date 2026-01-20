@@ -1,23 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Connect from '@/pages/ConectareInregistrare/Connect.vue'
-import PickAccount from '@/pages/ConectareInregistrare/PickAccount.vue'
-import NonexistentAccount from '@/pages/ConectareInregistrare/NonexistentAccount.vue'
-import Signup from '@/pages/ConectareInregistrare/Signup.vue'
-import Politica from '@/pages/ConectareInregistrare/Politica.vue'
-import Termeni from '@/pages/ConectareInregistrare/Termeni.vue'
-import ParolaUitata from '@/pages/Parola/ParolaUitata.vue'
-import ParolaUitataCod from '@/pages/Parola/ParolaUitataCod.vue'
-import ParolaNoua from '@/pages/Parola/ParolaNoua.vue'
-/*import ParolaNouaSucces from '@/pages/Parola/ParolaNouaSucces.vue'*/
-import Meniu from '@/pages/Meniu/Meniu.vue'
-/*import Programari from '@/Programari/Programari.vue'
-import Gata from '@/Programari/Gata.vue'
-import PNDataOra from '@/ProgramareNoua/PNDataOra.vue'
-import PNManopera from '@/ProgramareNoua/PNManopera.vue'
-import SuccesProgramare from '@/pages/ConectareInregistrare/SuccesProgramare.vue'
-import Clienti from '@/pages/Clienti/Clienti.vue'
-import ClientiProgramari from '@/Programari/ClientiProgramari.vue'
+import Connect from '@/pages/Connect.vue'
+import PickAccount from '@/components/ConectareInregistrare/PickAccount.vue'
+import NonexistentAccount from '@/components/ConectareInregistrare/NonexistentAccount.vue'
+import Signup from '@/pages/Signup.vue'
+import Politica from '@/components/ConectareInregistrare/Politica.vue'
+import Termeni from '@/components/ConectareInregistrare/Termeni.vue'
+import ParolaUitata from '@/components/Parola/ParolaUitataComponents/ParolaUitata.vue'
+import ParolaUitataCod from '@/components/Parola/ParolaUitataComponents/ParolaUitataCod.vue'
+import ParolaNoua from '@/components/Parola/ParolaUitataComponents/ParolaNoua.vue'
+import ParolaNouaSucces from '@/components/Parola/ParolaUitataComponents/ParolaNouaSucces.vue'
+import Meniu from '@/pages/Meniu.vue'
+import Utilizator from '@/pages/Utilizator.vue'
+import Programari from '@/pages/Programari.vue'
+import Gata from '@/components/Programari/Gata.vue'
+import ProgramareNoua from '@/pages/ProgramareNoua.vue'
+import Manopera from '@/components/ProgramareNoua/Manopera.vue'
+import SuccesProgramare from '@/components/ProgramareNoua/SuccesProgramare.vue'
+import Clienti from '@/pages/Clienti.vue'
+/*import ClientiProgramari from '@/Programari/ClientiProgramari.vue'
 import CreareClient from '@/pages/Clienti/CreareClient.vue'
 import Istoric from '@/pages/Istoric/Istoric.vue'*/
 
@@ -32,15 +33,16 @@ const routes = [
 { path: "/ParolaUitata", component: ParolaUitata },
 { path: "/ParolaUitataCod", component: ParolaUitataCod },
 { path: "/ParolaNoua", component: ParolaNoua },
-/*{ path: "/", component: ParolaNouaSucces },*/
-{ path: "/Meniu", component: Meniu }
-/*{ path: "/", component: Programari },
-{ path: "/", component: Gata },
-{ path: "/", component: PNDataOra },
-{ path: "/", component: PNManopera },
-{ path: "/", component: SuccesProgramare },
-{ path: "/", component: Clienti },
-{ path: "/", component: ClientiProgramari },
+{ path: "/ParolaNouaSucces", component: ParolaNouaSucces },
+{ path: "/Meniu", component: Meniu },
+{ path: "/Utilizator", component: Utilizator },
+{ path: "/Programari", component: Programari },
+{ path: "/Gata", component: Gata },
+{ path: "/ProgramareNoua", component: ProgramareNoua },
+{ path: "/Manopera", component: Manopera },
+{ path: "/SuccesProgramare", component: SuccesProgramare },
+{ path: "/Clienti", component: Clienti },
+/*{ path: "/", component: ClientiProgramari },
 { path: "/", component: CreareClient },
 { path: "/", component: Istoric }*/
 ]
