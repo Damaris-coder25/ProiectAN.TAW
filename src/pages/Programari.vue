@@ -1,29 +1,16 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import ProgList from '@/components/Programari/ProgList.vue'
+import { useCountProg } from '@/stores/countProg';
 
-const router = useRouter()
-
-const goToGata = () => {
-  router.push("/Gata")
-}
-
-import { ref } from 'vue'
-
-const titlu = ref('Programari')
+const countStore = useCountProg()
 </script>
 
 <template>
     <div class="text-center mt-5">
-        <h1 class="text-3xl font-bold ">
-            {{ titlu }}
-        </h1>
+    <ProgList />
     </div>
-
-<div class="text-center mt-5">
-        <button 
-            @click="goToGata"
-            class=" w-25 h-8 px-4  py-1 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-            Gata
-        </button>
-    </div>
+    <div>
+    <p>Numărul total de programari: {{ countStore.countProg }}</p>
+    <p>Numărul de programari favorite: {{ countStore.countFavoriteProg }}</p>
+  </div>
 </template>

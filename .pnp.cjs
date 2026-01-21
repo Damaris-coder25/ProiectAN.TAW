@@ -39,6 +39,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.1.8"],\
           ["eslint-plugin-vue", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.7.0"],\
           ["globals", "npm:16.5.0"],\
+          ["pinia", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4"],\
           ["pjan", "workspace:."],\
           ["prettier", "npm:3.8.0"],\
           ["prettier-plugin-tailwindcss", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:0.7.2"],\
@@ -3866,6 +3867,14 @@ const RAW_RUNTIME_STATE =
           ["@vue/devtools-api", "npm:6.6.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.7.9", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/@vue-devtools-api-npm-7.7.9-1202152103-10c0.zip/node_modules/@vue/devtools-api/",\
+        "packageDependencies": [\
+          ["@vue/devtools-api", "npm:7.7.9"],\
+          ["@vue/devtools-kit", "npm:7.7.9"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@vue/devtools-core", [\
@@ -3897,6 +3906,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/devtools-kit", [\
+      ["npm:7.7.9", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/@vue-devtools-kit-npm-7.7.9-ce3a8ec472-10c0.zip/node_modules/@vue/devtools-kit/",\
+        "packageDependencies": [\
+          ["@vue/devtools-kit", "npm:7.7.9"],\
+          ["@vue/devtools-shared", "npm:7.7.9"],\
+          ["birpc", "npm:2.9.0"],\
+          ["hookable", "npm:5.5.3"],\
+          ["mitt", "npm:3.0.1"],\
+          ["perfect-debounce", "npm:1.0.0"],\
+          ["speakingurl", "npm:14.0.1"],\
+          ["superjson", "npm:2.2.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:8.0.5", {\
         "packageLocation": "../home/node/.yarn/berry/cache/@vue-devtools-kit-npm-8.0.5-da61acc597-10c0.zip/node_modules/@vue/devtools-kit/",\
         "packageDependencies": [\
@@ -3913,6 +3936,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/devtools-shared", [\
+      ["npm:7.7.9", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/@vue-devtools-shared-npm-7.7.9-33081e0daa-10c0.zip/node_modules/@vue/devtools-shared/",\
+        "packageDependencies": [\
+          ["@vue/devtools-shared", "npm:7.7.9"],\
+          ["rfdc", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:8.0.5", {\
         "packageLocation": "../home/node/.yarn/berry/cache/@vue-devtools-shared-npm-8.0.5-249114d5f2-10c0.zip/node_modules/@vue/devtools-shared/",\
         "packageDependencies": [\
@@ -4288,6 +4319,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../home/node/.yarn/berry/cache/birpc-npm-2.8.0-f015b949b0-10c0.zip/node_modules/birpc/",\
         "packageDependencies": [\
           ["birpc", "npm:2.8.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.9.0", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/birpc-npm-2.9.0-6efd1f872a-10c0.zip/node_modules/birpc/",\
+        "packageDependencies": [\
+          ["birpc", "npm:2.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7608,6 +7646,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["perfect-debounce", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/perfect-debounce-npm-1.0.0-0968810009-10c0.zip/node_modules/perfect-debounce/",\
+        "packageDependencies": [\
+          ["perfect-debounce", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.0.0", {\
         "packageLocation": "../home/node/.yarn/berry/cache/perfect-debounce-npm-2.0.0-71fa4cdbac-10c0.zip/node_modules/perfect-debounce/",\
         "packageDependencies": [\
@@ -7641,6 +7686,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["pinia", [\
+      ["npm:3.0.4", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/pinia-npm-3.0.4-8d3fb478c4-10c0.zip/node_modules/pinia/",\
+        "packageDependencies": [\
+          ["pinia", "npm:3.0.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/pinia-virtual-b8b659b7c1/2/home/node/.yarn/berry/cache/pinia-npm-3.0.4-8d3fb478c4-10c0.zip/node_modules/pinia/",\
+        "packageDependencies": [\
+          ["@types/typescript", null],\
+          ["@types/vue", null],\
+          ["@vue/devtools-api", "npm:7.7.9"],\
+          ["pinia", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4"],\
+          ["typescript", null],\
+          ["vue", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.5.24"]\
+        ],\
+        "packagePeers": [\
+          "@types/typescript",\
+          "@types/vue",\
+          "typescript",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["pjan", [\
       ["workspace:.", {\
         "packageLocation": "./",\
@@ -7656,6 +7728,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.1.8"],\
           ["eslint-plugin-vue", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.7.0"],\
           ["globals", "npm:16.5.0"],\
+          ["pinia", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4"],\
           ["pjan", "workspace:."],\
           ["prettier", "npm:3.8.0"],\
           ["prettier-plugin-tailwindcss", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:0.7.2"],\

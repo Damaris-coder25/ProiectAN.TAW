@@ -2534,6 +2534,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/devtools-api@npm:^7.7.7":
+  version: 7.7.9
+  resolution: "@vue/devtools-api@npm:7.7.9"
+  dependencies:
+    "@vue/devtools-kit": "npm:^7.7.9"
+  checksum: 10c0/ca09265a88dcacbb51d13bd92a019fc14cc520b1704e0c7ea0b14ecbd0cfadeabeacfb3c94e69cdf5d038ba24bb4c2ab9abe8721a22efcd148e20b0611bd2298
+  languageName: node
+  linkType: hard
+
 "@vue/devtools-core@npm:^8.0.5":
   version: 8.0.5
   resolution: "@vue/devtools-core@npm:8.0.5"
@@ -2550,6 +2559,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/devtools-kit@npm:^7.7.9":
+  version: 7.7.9
+  resolution: "@vue/devtools-kit@npm:7.7.9"
+  dependencies:
+    "@vue/devtools-shared": "npm:^7.7.9"
+    birpc: "npm:^2.3.0"
+    hookable: "npm:^5.5.3"
+    mitt: "npm:^3.0.1"
+    perfect-debounce: "npm:^1.0.0"
+    speakingurl: "npm:^14.0.1"
+    superjson: "npm:^2.2.2"
+  checksum: 10c0/e6d488b18c379dbcffbbec0ea32383ea65a9d8445ad0616bc6c3f51e1a63d5971bc88bc7b074686d22f362516c388dbd0e07f3ced2e8ed8057cb5cc12a83eef1
+  languageName: node
+  linkType: hard
+
 "@vue/devtools-kit@npm:^8.0.5":
   version: 8.0.5
   resolution: "@vue/devtools-kit@npm:8.0.5"
@@ -2562,6 +2586,15 @@ __metadata:
     speakingurl: "npm:^14.0.1"
     superjson: "npm:^2.2.2"
   checksum: 10c0/6cf90e38b80be0d8b3876465fa8b42e834889f5e3c89ef94921167def5719b8c7968406aca960df9ef35e31b21c4c253d62886b5059e2a894bc2c4dad32975bb
+  languageName: node
+  linkType: hard
+
+"@vue/devtools-shared@npm:^7.7.9":
+  version: 7.7.9
+  resolution: "@vue/devtools-shared@npm:7.7.9"
+  dependencies:
+    rfdc: "npm:^1.4.1"
+  checksum: 10c0/f012f71689d453424d458b8dabf3f7fb92aa0ef03142f28270a8bc633a8605c3b80a1d96bd6011112c073025b301a3ca2121feb9966ad293d8c9d3a00a66ddeb
   languageName: node
   linkType: hard
 
@@ -2844,6 +2877,13 @@ __metadata:
   bin:
     baseline-browser-mapping: dist/cli.js
   checksum: 10c0/96c05a483de92a240b923a3fa5e115647dcab9b5bb86a80837f1f28bc5f41a7597a8ef356b60e8a4b663146e509552ff5c231d99dde4a11da3b82f53e76b16a9
+  languageName: node
+  linkType: hard
+
+"birpc@npm:^2.3.0":
+  version: 2.9.0
+  resolution: "birpc@npm:2.9.0"
+  checksum: 10c0/2462d0d67061f95bae213b0b9b323a6643ff749f7457a25242897c99e31355f1bd522c17f83ecf57506351e3e28b4e38c12a39b8beddee2dd0cbf78f9b9876ce
   languageName: node
   linkType: hard
 
@@ -5854,6 +5894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"perfect-debounce@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "perfect-debounce@npm:1.0.0"
+  checksum: 10c0/e2baac416cae046ef1b270812cf9ccfb0f91c04ea36ac7f5b00bc84cb7f41bdbba087c0ab21b4e02a7ef3a1f1f6db399f137cecec46868bd7d8d88c2a9ee431f
+  languageName: node
+  linkType: hard
+
 "perfect-debounce@npm:^2.0.0":
   version: 2.0.0
   resolution: "perfect-debounce@npm:2.0.0"
@@ -5882,6 +5929,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pinia@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "pinia@npm:3.0.4"
+  dependencies:
+    "@vue/devtools-api": "npm:^7.7.7"
+  peerDependencies:
+    typescript: ">=4.5.0"
+    vue: ^3.5.11
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/4123efbf28c6d11f3dd052dbcf08da7ef85747fd3499807b9ca1d32dcda7807b2e68f9a7e31a06148b05093a9ebcd0c3b26e6a31b62775c6421429bd03265949
+  languageName: node
+  linkType: hard
+
 "pjan@workspace:.":
   version: 0.0.0-use.local
   resolution: "pjan@workspace:."
@@ -5897,6 +5959,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-vue: "npm:^10.6.2"
     globals: "npm:^16.5.0"
+    pinia: "npm:^3.0.4"
     prettier: "npm:^3.8.0"
     prettier-plugin-tailwindcss: "npm:^0.7.2"
     tailwindcss: "npm:^4.1.17"

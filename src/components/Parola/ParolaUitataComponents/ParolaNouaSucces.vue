@@ -4,8 +4,8 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const goToConnect = () => {
-  router.push("/Connect")
+const goToSignup = () => {
+  router.push("/Signup")
 }
 
 const titlu = ref('Parola nouă a fost creeată cu succes!')
@@ -20,7 +20,7 @@ const titlu = ref('Parola nouă a fost creeată cu succes!')
     <br>
     <div class="text-center mt-5">
         <button 
-            @click="goToConnect"
+            @click="goToSignup"
             class=" w-72 h-12 px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
             Înapoi la pagina de conectare
       

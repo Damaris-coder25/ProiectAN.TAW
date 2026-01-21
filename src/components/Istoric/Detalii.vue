@@ -3,8 +3,9 @@
 import { ref,computed } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
-const goToMeniu = () => {
-  router.push("/Meniu")
+
+const goToIstoric = () => {
+  router.push("/Istoric");
 }
 const titlu = ref('Total')
 
@@ -47,9 +48,9 @@ const totalPrice = computed(() => {
     <br>
       <button 
             type="button"
-            @click="goToMeniu"
+            @click="goToIstoric"
             class=" w-20 h-6 px-2  py-1/2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-            Salvează
+            Inapoi la istoric
      </button>
     </div>
      
