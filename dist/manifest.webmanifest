@@ -1,1 +1,1 @@
-{"name":"pjan-temp","short_name":"pjan-temp","start_url":"./","display":"standalone","background_color":"#ffffff","theme_color":"#169bcb","lang":"en","scope":"./","icons":[{"src":"icons/android-chrome-192x192.png","sizes":"192x192","type":"image/png"}]}
+{"name":"pjan","short_name":"pjan","start_url":"./","display":"standalone","background_color":"#ffffff","theme_color":"#169bcb","lang":"en","scope":"./","icons":[{"src":"icons/android-chrome-192x192.png","sizes":"192x192","type":"image/png"}]}
