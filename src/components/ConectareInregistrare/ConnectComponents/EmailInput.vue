@@ -1,22 +1,24 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue"
 
-const emailInput = ref('');
+const emailInput = ref("")
 
 function handleInput(event) {
-  console.log('You typed: ' + event.target.value);
+  console.log("You typed: " + event.target.value)
 }
 </script>
 
 <template>
-    <div class="text-center mt-5">
-      <br>
-        <p class="font-bold">Email</p>
-      <br>
-    <input type="email" 
-        v-model="emailInput" 
-        @input="handleInput" 
-        placeholder="Introdu email-ul..."
-        class="w-70 h-10  px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
+  <div class="mt-5 text-center">
+    <br />
+    <p class="font-bold">Email</p>
+    <br />
+    <input
+      type="email"
+      v-model="emailInput"
+      @input="handleInput"
+      placeholder="Introdu email-ul..."
+      class="h-10 w-70 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+    />
+  </div>
 </template>

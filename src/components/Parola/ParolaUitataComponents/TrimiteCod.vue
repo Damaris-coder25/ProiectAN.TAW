@@ -1,5 +1,5 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
@@ -7,19 +7,18 @@ const goToParolaUitataCod = () => {
   router.push("/ParolaUitataCod")
 }
 
-import { ref } from 'vue'
+import { ref } from "vue"
 
-const message = ref('Trimite codul')
-
+const message = ref("Trimite codul")
 </script>
 
 <template>
-    <div class="text-center mt-5">
-        <button 
-            @click="goToParolaUitataCod"
-            class="w-35 h-8 px-4  py-1 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-            {{ message}}
-      
-        </button>
-    </div>
+  <div class="mt-5 text-center">
+    <button
+      @click="goToParolaUitataCod"
+      class="h-8 w-35 rounded-lg border border-black px-4 py-1 font-semibold shadow-md hover:bg-blue-100"
+    >
+      {{ message }}
+    </button>
+  </div>
 </template>

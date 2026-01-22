@@ -1,56 +1,72 @@
 <script setup>
-import { useIsto } from '@/stores/isto';
+import { useIsto } from "@/stores/isto"
 
-const istoStore = useIsto();
+const istoStore = useIsto()
 
-import { ref } from 'vue';
+import { ref } from "vue"
 
 const isAddingIsto = ref(false)
-const newIstoTitle = ref('')
-const newIstoTotal = ref('')
-const newIstoDate = ref('')
+const newIstoTitle = ref("")
+const newIstoTotal = ref("")
+const newIstoDate = ref("")
 
 const addNewIsto = () => {
-    if (!newIstoTitle.value || !newIstoTotal.value || !newIstoDate.value) return;
- 
-    istoStore.addIsto({
+  if (!newIstoTitle.value || !newIstoTotal.value || !newIstoDate.value) return
+
+  istoStore.addIsto({
     id: Math.floor(Math.random() * 1000000),
     title: newIstoTitle.value,
     total: parseFloat(newIstoTotal.value) || 0,
     date: newIstoDate.value
-  });
+  })
 
-  isAddingIsto.value = false;
-  newIstoTitle.value = '';
-  newIstoTotal.value = '';
-  newIstoDate.value = '';
+  isAddingIsto.value = false
+  newIstoTitle.value = ""
+  newIstoTotal.value = ""
+  newIstoDate.value = ""
 }
-
 </script>
 
 <template>
-  <br>
+  <br />
   <div v-if="!isAddingIsto">
-    <button 
-            @click="isAddingIsto = true"
-            type="button"
-            class=" w-50 h-8 px-4  py-1 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
+    <button
+      @click="isAddingIsto = true"
+      type="button"
+      class="h-8 w-50 rounded-lg border border-black px-4 py-1 font-semibold shadow-md hover:bg-blue-100"
+    >
       + Adauga Istoric
     </button>
   </div>
   <div v-else>
-    <input v-model="newIstoTitle" type="text" placeholder="Introdu client"
-      class="border border-gray-300 rounded px-2 ml-6">
+    <input
+      v-model="newIstoTitle"
+      type="text"
+      placeholder="Introdu client"
+      class="ml-6 rounded border border-gray-300 px-2"
+    />
 
-      <input v-model="newIstoTotal" type="number" placeholder="Introdu total"
-      class="border border-gray-300 rounded px-2 ml-6">
-        <input v-model="newIstoDate" type="date" placeholder="Alege data"
-      class="border border-gray-300 rounded px-2 ml-6">
+    <input
+      v-model="newIstoTotal"
+      type="number"
+      placeholder="Introdu total"
+      class="ml-6 rounded border border-gray-300 px-2"
+    />
+    <input
+      v-model="newIstoDate"
+      type="date"
+      placeholder="Alege data"
+      class="ml-6 rounded border border-gray-300 px-2"
+    />
 
-    <button type="button" class="bg-green-400 text-white px-2 ml-2 rounded" @click="addNewIsto">
+    <button type="button" class="ml-2 rounded bg-green-400 px-2 text-white" @click="addNewIsto">
       Save
     </button>
-    <button type="button" class="bg-red-400 text-white px-2 ml-2 rounded" @click="isAddingIsto = false">
+    <button
+      type="button"
+      class="ml-2 rounded bg-red-400 px-2 text-white"
+      @click="isAddingIsto = false"
+    >
       Cancel
     </button>
   </div>

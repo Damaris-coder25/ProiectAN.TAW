@@ -1,17 +1,17 @@
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
 const props = defineProps({
   app: {
     type: String,
-    required: true,
+    required: true
   },
   route: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 })
 
 const goTo = () => {
@@ -20,11 +20,12 @@ const goTo = () => {
 </script>
 
 <template>
-    <div class="text-center mt-5">
-        <button 
-            @click="goTo"
-            class=" w-72 h-12 px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-             {{ app }}
-        </button>
-    </div>
+  <div class="mt-5 text-center">
+    <button
+      @click="goTo"
+      class="h-12 w-72 rounded-lg border border-black px-6 py-2 font-semibold shadow-md hover:bg-blue-100"
+    >
+      {{ app }}
+    </button>
+  </div>
 </template>

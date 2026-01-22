@@ -1,7 +1,7 @@
 <script setup>
-import PageTitle from '@/components/Meniu/PageTitle.vue'
-import ConnectButton from '@/components/Meniu/ConnectButton.vue'
-import { useRouter } from 'vue-router'
+import PageTitle from "@/components/Meniu/PageTitle.vue"
+import ConnectButton from "@/components/Meniu/ConnectButton.vue"
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
@@ -11,14 +11,12 @@ const goToUtilizator = () => {
 </script>
 
 <template>
-<div class="flex justify-end p-4">
-  <i 
-  @click="goToUtilizator"
-  class="bi bi-person-fill text-4xl"></i>
-</div>
+  <div class="flex justify-end p-4">
+    <i @click="goToUtilizator" class="bi bi-person-fill text-4xl"></i>
+  </div>
 
   <PageTitle />
-  <br>
+  <br />
   <ConnectButton app="Programari" route="/Programari" />
   <ConnectButton app="Programare noua" route="/ProgramareNoua" />
   <ConnectButton app="Clienti" route="/Clienti" />

@@ -1,30 +1,29 @@
 <script setup>
-import PageTitle from '@/components/ConectareInregistrare/ConnectComponents/PageTitle.vue'
-import ConnectButton from '@/components/ConectareInregistrare/ConnectComponents/ConnectButton.vue'
-import EmailInput from '@/components/ConectareInregistrare/ConnectComponents/EmailInput.vue'
-import ContinueButton from '@/components/ConectareInregistrare/ConnectComponents/ContinueButton.vue'
+import PageTitle from "@/components/ConectareInregistrare/ConnectComponents/PageTitle.vue"
+import ConnectButton from "@/components/ConectareInregistrare/ConnectComponents/ConnectButton.vue"
+import EmailInput from "@/components/ConectareInregistrare/ConnectComponents/EmailInput.vue"
+import ContinueButton from "@/components/ConectareInregistrare/ConnectComponents/ContinueButton.vue"
 </script>
 
 <template>
-
   <PageTitle />
-  <br>
+  <br />
   <ConnectButton app="Instagram" />
   <ConnectButton app="Facebook" />
   <ConnectButton app="Google" />
-  <br>
-  <hr>
-  <br>
+  <br />
+  <hr />
+  <br />
   <EmailInput />
   <ContinueButton />
-        <nav class="flex justify-center items-center gap-2 mt-4 text-sm text-gray-600">
-            <RouterLink to="/Politica">Politica de confidentialitate</RouterLink>
-            <p> | </p>
-            <RouterLink to="/Termeni">Termeni si conditii</RouterLink>
-        </nav>
-  <br>
-  <br>
-  <br>
+  <nav class="mt-4 flex items-center justify-center gap-2 text-sm text-gray-600">
+    <RouterLink to="/Politica">Politica de confidentialitate</RouterLink>
+    <p>|</p>
+    <RouterLink to="/Termeni">Termeni si conditii</RouterLink>
+  </nav>
+  <br />
+  <br />
+  <br />
 </template>
 
 <style>

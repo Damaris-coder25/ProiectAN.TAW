@@ -33,7 +33,6 @@ export const useIsto = defineStore("isto", {
       const index = this.istos.findIndex(isto => isto.id === id)
       this.istos[index].title = newTitle
       localStorage.setItem("istos", JSON.stringify(this.istos))
-    },
-   
+    }
   }
 })

@@ -1,6 +1,6 @@
 <script setup>
-import ConnectIcon from './ConnectIcon.vue'
-import { useRouter } from 'vue-router'
+import ConnectIcon from "./ConnectIcon.vue"
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 
@@ -8,16 +8,13 @@ const goToPickAccount = () => {
   router.push("/PickAccount")
 }
 
-const props = defineProps(['app'])
+const props = defineProps(["app"])
 
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue"
 
-const message = ref('Continue with')
+const message = ref("Continue with")
 
-const icons=ref([
-    {logo:'instagram'},
-    {logo:'facebook'},
-    {logo:'google'}])
+const icons = ref([{ logo: "instagram" }, { logo: "facebook" }, { logo: "google" }])
 
 // filtrăm doar iconul potrivit aplicației primite
 const filteredIcons = computed(() =>
@@ -26,16 +23,13 @@ const filteredIcons = computed(() =>
 </script>
 
 <template>
-    <div class="text-center mt-5">
-        <button 
-            @click="goToPickAccount"
-            class=" w-72 h-12 px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-            <ConnectIcon
-            v-for="(item,index) in filteredIcons"
-            :key="index"
-            :icon="item.logo" />
-            {{ message}} {{ props.app }}
-      
-        </button>
-    </div>
+  <div class="mt-5 text-center">
+    <button
+      @click="goToPickAccount"
+      class="h-12 w-72 rounded-lg border border-black px-6 py-2 font-semibold shadow-md hover:bg-blue-100"
+    >
+      <ConnectIcon v-for="(item, index) in filteredIcons" :key="index" :icon="item.logo" />
+      {{ message }} {{ props.app }}
+    </button>
+  </div>
 </template>

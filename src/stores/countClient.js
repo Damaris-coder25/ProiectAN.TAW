@@ -3,9 +3,8 @@ import { useClient } from "./client"
 
 export const useCountClient = defineStore("countClient", {
   getters: {
-    
     countClients() {
-      const clientStore = useClient() 
+      const clientStore = useClient()
       return clientStore.clients.length
     },
 

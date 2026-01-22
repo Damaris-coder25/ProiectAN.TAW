@@ -3,9 +3,8 @@ import { useProg } from "./prog"
 
 export const useCountProg = defineStore("countProg", {
   getters: {
-
     countProg() {
-      const progStore = useProg() 
+      const progStore = useProg()
       return progStore.progs.length
     },
 

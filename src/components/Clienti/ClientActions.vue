@@ -1,8 +1,7 @@
 <script setup>
+import { useClient } from "@/stores/client"
 
-import { useClient } from '@/stores/client';
-
-const clientStore = useClient();
+const clientStore = useClient()
 
 defineProps({
   clientId: {
@@ -18,12 +17,12 @@ defineProps({
 
 <template>
   <div class="flex items-center">
-    <button class="cursor-pointer mr-2" @click="clientStore.toggleFavorite(clientId)">
-      <i class="bi " :class="isFavorite ? 'bi-star-fill text-yellow-500' : 'bi-star'"></i>
+    <button class="mr-2 cursor-pointer" @click="clientStore.toggleFavorite(clientId)">
+      <i class="bi" :class="isFavorite ? 'bi-star-fill text-yellow-500' : 'bi-star'"></i>
     </button>
 
     <button class="cursor-pointer" @click="clientStore.removeClient(clientId)">
-      <i class="bi bi-trash" ></i>
+      <i class="bi bi-trash"></i>
     </button>
   </div>
 </template>

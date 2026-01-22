@@ -1,9 +1,9 @@
 <script setup>
-import { useIsto } from '@/stores/isto';
-import { useRouter } from 'vue-router';
+import { useIsto } from "@/stores/isto"
+import { useRouter } from "vue-router"
 
 const router = useRouter()
-const istoStore = useIsto();
+const istoStore = useIsto()
 
 defineProps({
   istoId: {
@@ -19,16 +19,17 @@ const goToDetalii = () => {
 
 <template>
   <div>
-     <button 
-            type="button"
-            @click="goToDetalii"
-            class="mr-2 w-15 h-6 px-2  py-1/2 font-semibold rounded-lg shadow-md hover:bg-blue-100 border border-black">
-            Detalii
-     </button>
-     <button class="cursor-pointer" @click="istoStore.removeIsto(istoId)">
-      <i class="bi bi-trash" ></i>
+    <button
+      type="button"
+      @click="goToDetalii"
+      class="py-1/2 mr-2 h-6 w-15 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-blue-100"
+    >
+      Detalii
     </button>
-     <br>
-     <br>
+    <button class="cursor-pointer" @click="istoStore.removeIsto(istoId)">
+      <i class="bi bi-trash"></i>
+    </button>
+    <br />
+    <br />
   </div>
 </template>

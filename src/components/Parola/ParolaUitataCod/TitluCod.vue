@@ -1,14 +1,13 @@
 <script setup>
+import { ref } from "vue"
 
-import { ref } from 'vue'
-
-const messaje = ref('Parola Uitata Cod')
+const messaje = ref("Parola Uitata Cod")
 </script>
 
 <template>
-    <div class="text-center mt-5">
-        <h1 class="text-4xl font-bold ">
-            {{ messaje }}
-        </h1>
-    </div>
+  <div class="mt-5 text-center">
+    <h1 class="text-4xl font-bold">
+      {{ messaje }}
+    </h1>
+  </div>
 </template>

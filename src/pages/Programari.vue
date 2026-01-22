@@ -1,15 +1,15 @@
 <script setup>
-import ProgList from '@/components/Programari/ProgList.vue'
-import { useCountProg } from '@/stores/countProg';
+import ProgList from "@/components/Programari/ProgList.vue"
+import { useCountProg } from "@/stores/countProg"
 
 const countStore = useCountProg()
 </script>
 
 <template>
-    <div class="text-center mt-5">
+  <div class="mt-5 text-center">
     <ProgList />
-    </div>
-    <div>
+  </div>
+  <div>
     <p>Numărul total de programari: {{ countStore.countProg }}</p>
     <p>Numărul de programari favorite: {{ countStore.countFavoriteProg }}</p>
   </div>

@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue"
 
-const titlu = ref('Politica de confidențialitate')
+const titlu = ref("Politica de confidențialitate")
 </script>
 
 <template>
-    <div class="text-center mt-5">
-    <h1 class="text-2xl font-bold ">
+  <div class="mt-5 text-center">
+    <h1 class="text-2xl font-bold">
       {{ titlu }}
     </h1>
-    </div>
+  </div>
 </template>

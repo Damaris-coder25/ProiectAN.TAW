@@ -1,17 +1,17 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url"
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from "vite"
+import vue from "@vitejs/plugin-vue"
+import vueDevTools from "vite-plugin-vue-devtools"
+import tailwindcss from "@tailwindcss/vite"
+import { VitePWA } from "vite-plugin-pwa"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/ProiectAN.TAW/',
+  base: "",
   plugins: [
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: "autoUpdate",
       devOptions: {
         enabled: true
       },
@@ -21,21 +21,21 @@ export default defineConfig({
           {
             src: "icons/picture.png",
             sizes: "192x192",
-            type: "image/png",
+            type: "image/png"
           }
         ]
       }
     }),
     vue(),
     vueDevTools(),
-    tailwindcss(),
+    tailwindcss()
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+      "@": fileURLToPath(new URL("./src", import.meta.url))
+    }
   },
   define: {
-__VUE_OPTIONS_API__: false
+    __VUE_OPTIONS_API__: false
   }
 })
