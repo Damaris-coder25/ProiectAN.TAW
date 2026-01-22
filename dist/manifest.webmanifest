@@ -1,1 +1,1 @@
-{"name":"pjan","short_name":"pjan","start_url":"./","display":"standalone","background_color":"#ffffff","theme_color":"#169bcb","lang":"en","scope":"./","icons":[{"src":"icons/picture.png","sizes":"192x192","type":"image/png"}]}
+{"name":"pjan","short_name":"pjan","start_url":"/ProiectAN.TAW/","display":"standalone","background_color":"#ffffff","theme_color":"#169bcb","lang":"en","scope":"/ProiectAN.TAW/","icons":[{"src":"icons/picture.png","sizes":"192x192","type":"image/png"}]}
