@@ -19,7 +19,7 @@ export default defineConfig({
         theme_color: "#169bcb",
         icons: [
           {
-            src: "icons/android-chrome-192x192.png",
+            src: "icons/picture.png",
             sizes: "192x192",
             type: "image/png",
           }

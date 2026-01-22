@@ -90,8 +90,11 @@ define(['./workbox-7f60d0f7'], (function (workbox) { 'use strict';
     "url": "assets/index-BPv_sdZS.css",
     "revision": null
   }, {
+    "url": "icons/picture.png",
+    "revision": "bdc3a865629f3f3f99aa9513612d0e49"
+  }, {
     "url": "manifest.webmanifest",
-    "revision": "da7ef1b45b12be71cff073464cd81144"
+    "revision": "17485a41a22c63320ff3fcd27f3f1d77"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html")));

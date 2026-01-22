@@ -38,10 +38,10 @@ const RAW_RUNTIME_STATE =
           ["eslint", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:9.39.2"],\
           ["eslint-config-prettier", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.1.8"],\
           ["eslint-plugin-vue", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.7.0"],\
-          ["globals", "npm:16.5.0"],\
+          ["globals", "npm:17.0.0"],\
           ["pinia", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4"],\
           ["pjan", "workspace:."],\
-          ["prettier", "npm:3.8.0"],\
+          ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-tailwindcss", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:0.7.2"],\
           ["tailwindcss", "npm:4.1.17"],\
           ["vite", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:7.3.1"],\
@@ -5671,10 +5671,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:16.5.0", {\
-        "packageLocation": "../home/node/.yarn/berry/cache/globals-npm-16.5.0-9e83817f44-10c0.zip/node_modules/globals/",\
+      ["npm:17.0.0", {\
+        "packageLocation": "../home/node/.yarn/berry/cache/globals-npm-17.0.0-cd88395af3-10c0.zip/node_modules/globals/",\
         "packageDependencies": [\
-          ["globals", "npm:16.5.0"]\
+          ["globals", "npm:17.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7727,10 +7727,10 @@ const RAW_RUNTIME_STATE =
           ["eslint", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:9.39.2"],\
           ["eslint-config-prettier", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.1.8"],\
           ["eslint-plugin-vue", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:10.7.0"],\
-          ["globals", "npm:16.5.0"],\
+          ["globals", "npm:17.0.0"],\
           ["pinia", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:3.0.4"],\
           ["pjan", "workspace:."],\
-          ["prettier", "npm:3.8.0"],\
+          ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-tailwindcss", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:0.7.2"],\
           ["tailwindcss", "npm:4.1.17"],\
           ["vite", "virtual:86639941dcc6d8966b4de064e5644531f72d9fae54739dc24df419b1f5c3c27c3e39245ac0e9c398d14715c2c386cf641b89c261f3544b429c8c27cd56812a4f#npm:7.3.1"],\
@@ -7785,10 +7785,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:3.8.0", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.0-7cbf267d2c/node_modules/prettier/",\
+      ["npm:3.8.1", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.1-04022a855f/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:3.8.0"]\
+          ["prettier", "npm:3.8.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7828,7 +7828,7 @@ const RAW_RUNTIME_STATE =
           ["@types/trivago__prettier-plugin-sort-imports", null],\
           ["@types/zackad__prettier-plugin-twig", null],\
           ["@zackad/prettier-plugin-twig", null],\
-          ["prettier", "npm:3.8.0"],\
+          ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-astro", null],\
           ["prettier-plugin-css-order", null],\
           ["prettier-plugin-jsdoc", null],\
