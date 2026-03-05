@@ -41,37 +41,26 @@ const dataAfisata = computed(() => {
     <br />
 
     <p class="font-bold">Client</p>
-    <input
-      type="text"
-      v-model="client"
-      placeholder="Introdu clientul..."
-      class="h-10 w-70 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-    />
+    <input type="text" v-model="client" placeholder="Introdu clientul..."
+      class="h-10 w-70 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
     <br />
     <br />
     <p class="font-bold">Data și ora</p>
-    <input
-      v-model="dataProgramare"
-      type="datetime-local"
-      class="h-10 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
-    />
+    <input v-model="dataProgramare" type="datetime-local"
+      class="h-10 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
 
     <br /><br />
 
     <p v-if="dataAfisata" class="font-semibold text-green-600">📅 Programare: {{ dataAfisata }}</p>
 
-    <button
-      type="button"
+    <button type="button"
       class="mr-2 h-8 w-38 rounded-lg border border-black px-4 py-1 font-semibold shadow-md hover:bg-blue-100"
-      @click="goToSuccesProgramare"
-    >
+      @click="goToSuccesProgramare">
       Verificare
     </button>
-    <button
-      type="button"
+    <button type="button"
       class="ml-2 h-8 w-38 rounded-lg border border-black px-4 py-1 font-semibold shadow-md hover:bg-blue-100"
-      @click="goToManopera"
-    >
+      @click="goToManopera">
       Manoperă
     </button>
   </div>
