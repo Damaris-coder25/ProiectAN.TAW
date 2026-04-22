@@ -35,3 +35,36 @@ services:
       # - /api/.git/
     working_dir: /task/api
     user: 1000:1000
+
+  mysql:
+    build: .docker/mysql
+    container_name: mysql.tasksproject
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: tasks
+      MYSQL_USER: tasks
+      MYSQL_PASSWORD: tasks
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./.docker/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
+      - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+      - ./database:/database:rw
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2.3
+    container_name: pma.tasksproject
+    ports:
+      - "8088:80"
+    environment:
+      PMA_HOST: mysql.tasksproject
+      PMA_USER: tasks
+      PMA_PASSWORD: tasks
+      UPLOAD_LIMIT: 250M
+    restart: always
+
+volumes:
+  mysql_data:
+    driver: local

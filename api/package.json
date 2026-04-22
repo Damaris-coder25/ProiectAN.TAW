@@ -1,5 +1,14 @@
 {
   "name": "api",
   "packageManager": "yarn@4.9.2",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "dev": "node api.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0",
+    "sequelize": "^6.37.8"
+  }
 }
