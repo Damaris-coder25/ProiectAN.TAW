@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-5a5d9309'], (function (workbox) { 'use strict';
+define(['./workbox-6b90341c'], (function (workbox) { 'use strict';
 
   self.skipWaiting();
   workbox.clientsClaim();
@@ -82,12 +82,12 @@ define(['./workbox-5a5d9309'], (function (workbox) { 'use strict';
     "revision": "402b66900e731ca748771b6fc5e7a068"
   }, {
     "url": "index.html",
-    "revision": "c8a27e28f41491b30fd00ed6e1750fd1"
+    "revision": "58f3d56cc4b9a616bd2117f1c28027dd"
   }, {
-    "url": "assets/index-C6xvOxX7.js",
+    "url": "assets/index-Dck0Rzjq.css",
     "revision": null
   }, {
-    "url": "assets/index-BzZZHToW.css",
+    "url": "assets/index-CvhgqAb6.js",
     "revision": null
   }, {
     "url": "icons/picture.png",

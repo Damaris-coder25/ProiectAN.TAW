@@ -3,7 +3,7 @@ services:
     build: .docker/app
     stdin_open: true
     tty: true
-    container_name: app.taskproject
+    container_name: app.anproject
     environment:
       NODE_ENV: development
       CHOKIDAR_USEPOLLING: true
@@ -17,12 +17,11 @@ services:
     working_dir: /task/app
     user: 1000:1000
 
-
   api:
     build: .docker/api
     stdin_open: true
     tty: true
-    container_name: api.taskproject
+    container_name: api.anproject
     environment:
       NODE_ENV: development
       CHOKIDAR_USEPOLLING: true
@@ -38,14 +37,14 @@ services:
 
   mysql:
     build: .docker/mysql
-    container_name: mysql.tasksproject
+    container_name: mysql.anproject
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: tasks
-      MYSQL_USER: tasks
-      MYSQL_PASSWORD: tasks
+      MYSQL_DATABASE: task
+      MYSQL_USER: task
+      MYSQL_PASSWORD: task
     volumes:
       - mysql_data:/var/lib/mysql
       - ./.docker/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
@@ -55,13 +54,13 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.3
-    container_name: pma.tasksproject
+    container_name: pma.anproject
     ports:
       - "8088:80"
     environment:
-      PMA_HOST: mysql.tasksproject
-      PMA_USER: tasks
-      PMA_PASSWORD: tasks
+      PMA_HOST: mysql.anproject
+      PMA_USER: task
+      PMA_PASSWORD: task
       UPLOAD_LIMIT: 250M
     restart: always
 
