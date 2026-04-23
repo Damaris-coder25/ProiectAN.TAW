@@ -1,46 +1,41 @@
 import { defineStore } from "pinia"
+import axios from "axios"
+
+const API = "http://localhost:3000/client"
 
 export const useClient = defineStore("client", {
   state: () => ({
-    clients: [
-      {
-        id: 1,
-        name: "Nechifor Aurel",
-        telefon: "0723456789",
-        favorite: false
-      },
-      {
-        id: 2,
-        name: "Nea Goe",
-        telefon: "0734567890",
-        favorite: false
-      }
-    ]
+    clients: []
   }),
   actions: {
-    addClient(client) {
-      this.clients.push(client)
-      localStorage.setItem("clients", JSON.stringify(this.clients))
+    async fetchClients() {
+      const res = await axios.get(`${API}/get-all`)
+      this.clients = res.data
     },
 
-    removeClient(id) {
+    async addClient(client) {
+      const res = await axios.post(`${API}/add`, client)
+      this.clients.push(res.data)
+    },
+
+    async removeClient(id) {
+      await axios.delete(`${API}/delete`, { data: { id } })
       this.clients.splice(
         this.clients.findIndex(client => client.id === id),
         1
       )
-      localStorage.setItem("clients", JSON.stringify(this.clients))
     },
 
-    updateClientName(id, newName) {
+    async updateClientName(id, newName) {
+      await axios.put(`${API}/update-name`, { id, newName })
       const index = this.clients.findIndex(client => client.id === id)
       this.clients[index].name = newName
-      localStorage.setItem("clients", JSON.stringify(this.clients))
     },
 
-    toggleFavorite(id) {
+    async toggleFavorite(id) {
+      await axios.put(`${API}/toggle-favorite`, { id })
       const index = this.clients.findIndex(client => client.id === id)
       this.clients[index].favorite = !this.clients[index].favorite
-      localStorage.setItem("clients", JSON.stringify(this.clients))
     }
   }
 })

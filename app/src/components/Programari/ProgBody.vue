@@ -17,17 +17,13 @@ const saveProgTitle = () => {
   isEditMode.value = false
 }
 </script>
+
 <template>
-  <div class="grid grid-cols-6 gap-2">
+  <div class="grid grid-cols-6 gap-2 mb-2">
     <div v-if="!isEditMode" class="col-span-3" @click="isEditMode = true">{{ prog.title }}</div>
     <div v-else class="col-span-3">
-      <input
-        v-model="progEditTitle"
-        type="text"
-        class="w-full bg-gray-100"
-        @keyup.enter="saveProgTitle"
-      />
+      <input v-model="progEditTitle" type="text" class="w-full bg-gray-100" @keyup.enter="saveProgTitle" />
     </div>
-    <ProgActions :progId="prog.id" :isFavorite="prog.favorite" />
+    <ProgActions :progId="prog.id" :isFavorite="prog.favorite" :progTitle="prog.title" />
   </div>
 </template>

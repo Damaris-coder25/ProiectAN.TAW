@@ -9,10 +9,7 @@ import ClientFooter from "./ClientFooter.vue"
 const clientStore = useClient()
 
 onMounted(() => {
-  const clients = localStorage.getItem("clients")
-  if (clients) {
-    clientStore.$patch({ clients: JSON.parse(clients) })
-  }
+  clientStore.fetchClients()
 })
 </script>
 

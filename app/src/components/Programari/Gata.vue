@@ -1,47 +1,69 @@
 <script setup>
-import { ref, computed } from "vue"
-import { useRouter } from "vue-router"
-const router = useRouter()
-const goToMeniu = () => {
-  router.push("/Meniu")
-}
-const titlu = ref("Total")
+import { ref, computed, onMounted } from "vue"
+import { useRouter, useRoute } from "vue-router"
+import { useProg } from "@/stores/prog"
+import { useIsto } from "@/stores/isto"
+import axios from "axios"
 
-const emit = defineEmits(["update:totalPrice"])
+const router = useRouter()
+const route = useRoute()
+const progStore = useProg()
+const istoStore = useIsto()
+
+const progId = computed(() => Number(route.params.id))
+const prog = computed(() => progStore.progs.find(p => p.id === progId.value))
+
 const item1 = ref(0)
 const item2 = ref(0)
 
-const totalPrice = computed(() => {
-  const total = item1.value + item2.value + " lei"
-  emit("update:totalPrice", total)
-  return total
+const totalPrice = computed(() => item1.value + item2.value)
+
+onMounted(() => {
+  if (progStore.progs.length === 0) {
+    progStore.fetchProgs()
+  }
 })
+
+const salveazaInIstoric = async () => {
+  const title = prog.value?.title || "Programare"
+
+  await istoStore.addIsto({
+    total: totalPrice.value,
+    date: new Date().toISOString().split("T")[0],
+    title: title
+  })
+
+  await progStore.removeProg(progId.value)
+
+  router.push("/Istoric")
+}
 </script>
 
 <template>
   <div class="mt-5 text-center">
-    <h1 class="text-3xl font-bold">
-      {{ titlu }}
-    </h1>
+    <h1 class="text-3xl font-bold">Total</h1>
     <br />
+
+    <p v-if="prog" class="text-lg font-semibold text-gray-700 mb-4">{{ prog.title }}</p>
+
     <br />
     Schimb bucse:
     <input v-model="item1" class="rounded-lg border" type="number" />
-    <br />
-    <br />
+    <br /><br />
     Schimb placute:
     <input v-model="item2" class="rounded-lg border" type="number" />
+    <br /><br />
+
+    <p>Total : <b>{{ totalPrice }} lei</b></p>
     <br />
-    <br />
-    <p>
-      Total : <b>{{ totalPrice }}</b>
-    </p>
-    <br />
-    <button
-      type="button"
-      @click="goToMeniu"
-      class="py-1/2 h-6 w-20 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-blue-100"
-    >
+
+    <button type="button" @click="router.back()"
+      class="mr-4 h-8 w-20 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-gray-100">
+      Înapoi
+    </button>
+
+    <button type="button" @click="salveazaInIstoric"
+      class="h-8 w-28 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-blue-100">
       Salvează
     </button>
   </div>

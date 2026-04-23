@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
 const db = {
-  NAME: "task",
-  USERNAME: "task",
-  PASSWORD: "task",
+  NAME: "pjan",
+  USERNAME: "pjan",
+  PASSWORD: "pjan",
 
   options: {
     dialect: "mysql",

@@ -9,21 +9,14 @@ import IstoFooter from "./IstoFooter.vue"
 import { onMounted } from "vue"
 
 onMounted(() => {
-  const istos = localStorage.getItem("istos")
-  if (istos && JSON.parse(istos).length) {
-    istoStore.$patch({ istos: JSON.parse(istos) })
-  }
+  istoStore.fetchIstos()
 })
 </script>
 <template>
   <IstoHeader />
   <div class="mt-5 ml-25">
-    <IstoBody
-      v-for="(isto, index) in istoStore.istos"
-      :key="index"
-      :isto="isto"
-      @update:isto:title="newTitle => istoStore.updateIstoTitle(isto.id, newTitle)"
-    />
+    <IstoBody v-for="(isto, index) in istoStore.istos" :key="index" :isto="isto"
+      @update:isto:title="newTitle => istoStore.updateIstoTitle(isto.id, newTitle)" />
   </div>
   <IstoFooter />
 </template>

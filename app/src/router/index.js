@@ -14,6 +14,7 @@ import Meniu from "@/pages/Meniu.vue"
 import Utilizator from "@/pages/Utilizator.vue"
 import Programari from "@/pages/Programari.vue"
 import Gata from "@/components/Programari/Gata.vue"
+import ProgDetalii from "@/components/Programari/ProgDetalii.vue"
 import ProgramareNoua from "@/pages/ProgramareNoua.vue"
 import Manopera from "@/components/ProgramareNoua/Manopera.vue"
 import SuccesProgramare from "@/components/ProgramareNoua/SuccesProgramare.vue"
@@ -34,7 +35,8 @@ const routes = [
   { path: "/Meniu", component: Meniu },
   { path: "/Utilizator", component: Utilizator },
   { path: "/Programari", component: Programari },
-  { path: "/Gata", component: Gata },
+  { path: "/Gata/:id", component: Gata },
+  { path: "/ProgDetalii/:id", component: ProgDetalii },
   { path: "/ProgramareNoua", component: ProgramareNoua },
   { path: "/Manopera", component: Manopera },
   { path: "/SuccesProgramare", component: SuccesProgramare },

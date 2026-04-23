@@ -1,38 +1,48 @@
 import { defineStore } from "pinia"
+import axios from "axios"
+
+const API = "http://localhost:3000/factura"
 
 export const useIsto = defineStore("isto", {
   state: () => ({
-    istos: [
-      {
-        id: 1,
-        title: "Nechifor Aurel",
-        total: 100,
-        date: "2026-01-15"
-      },
-      {
-        id: 2,
-        title: "Nea Goe",
-        total: 200,
-        date: "2026-01-20"
-      }
-    ]
+    istos: []
   }),
   actions: {
-    addIsto(isto) {
-      this.istos.push(isto)
-      localStorage.setItem("istos", JSON.stringify(this.istos))
+    async fetchIstos() {
+      const res = await axios.get(`${API}/get-all`)
+      this.istos = res.data.map(f => ({
+        id: f.id,
+        title: f.programare?.title || "",
+        total: f.total,
+        date: f.date
+      }))
     },
-    removeIsto(id) {
+
+    async addIsto(isto) {
+      const res = await axios.post(`${API}/add`, {
+        total: isto.total,
+        date: isto.date,
+        ProgramareId: isto.ProgramareId || null
+      })
+      this.istos.push({
+        id: res.data.id,
+        title: isto.title || "",
+        total: res.data.total,
+        date: res.data.date
+      })
+    },
+
+    async removeIsto(id) {
+      await axios.delete(`${API}/delete`, { data: { id } })
       this.istos.splice(
         this.istos.findIndex(isto => isto.id === id),
         1
       )
-      localStorage.setItem("istos", JSON.stringify(this.istos))
     },
-    updateIstoTitle(id, newTitle) {
+
+    async updateIstoTitle(id, newTitle) {
       const index = this.istos.findIndex(isto => isto.id === id)
       this.istos[index].title = newTitle
-      localStorage.setItem("istos", JSON.stringify(this.istos))
     }
   }
 })

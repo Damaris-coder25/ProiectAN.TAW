@@ -42,9 +42,9 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: task
-      MYSQL_USER: task
-      MYSQL_PASSWORD: task
+      MYSQL_DATABASE: pjan
+      MYSQL_USER: pjan
+      MYSQL_PASSWORD: pjan
     volumes:
       - mysql_data:/var/lib/mysql
       - ./.docker/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
@@ -59,8 +59,8 @@ services:
       - "8088:80"
     environment:
       PMA_HOST: mysql.anproject
-      PMA_USER: task
-      PMA_PASSWORD: task
+      PMA_USER: pjan
+      PMA_PASSWORD: pjan
       UPLOAD_LIMIT: 250M
     restart: always
 

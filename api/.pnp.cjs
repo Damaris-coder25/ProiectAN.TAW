@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["api", "workspace:."],\
           ["body-parser", "npm:2.2.2"],\
           ["express", "npm:5.2.1"],\
-          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.20.0"],\
+          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.22.2"],\
           ["sequelize", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:6.37.8"]\
         ],\
         "linkType": "SOFT"\
@@ -93,7 +93,7 @@ const RAW_RUNTIME_STATE =
           ["api", "workspace:."],\
           ["body-parser", "npm:2.2.2"],\
           ["express", "npm:5.2.1"],\
-          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.20.0"],\
+          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.22.2"],\
           ["sequelize", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:6.37.8"]\
         ],\
         "linkType": "SOFT"\
@@ -667,15 +667,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mysql2", [\
-      ["npm:3.20.0", {\
-        "packageLocation": "../../home/node/.yarn/berry/cache/mysql2-npm-3.20.0-36178d7825-10c0.zip/node_modules/mysql2/",\
+      ["npm:3.22.2", {\
+        "packageLocation": "../../home/node/.yarn/berry/cache/mysql2-npm-3.22.2-07d4ab9ae5-10c0.zip/node_modules/mysql2/",\
         "packageDependencies": [\
-          ["mysql2", "npm:3.20.0"]\
+          ["mysql2", "npm:3.22.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.20.0", {\
-        "packageLocation": "./.yarn/__virtual__/mysql2-virtual-de2674eb37/3/home/node/.yarn/berry/cache/mysql2-npm-3.20.0-36178d7825-10c0.zip/node_modules/mysql2/",\
+      ["virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.22.2", {\
+        "packageLocation": "./.yarn/__virtual__/mysql2-virtual-ea4e8299ec/3/home/node/.yarn/berry/cache/mysql2-npm-3.22.2-07d4ab9ae5-10c0.zip/node_modules/mysql2/",\
         "packageDependencies": [\
           ["@types/node", null],\
           ["aws-ssl-profiles", "npm:1.1.2"],\
@@ -684,7 +684,7 @@ const RAW_RUNTIME_STATE =
           ["iconv-lite", "npm:0.7.2"],\
           ["long", "npm:5.3.2"],\
           ["lru.min", "npm:1.1.4"],\
-          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.20.0"],\
+          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.22.2"],\
           ["named-placeholders", "npm:1.1.6"],\
           ["sql-escaper", "npm:1.3.3"]\
         ],\
@@ -903,7 +903,7 @@ const RAW_RUNTIME_STATE =
           ["mariadb", null],\
           ["moment", "npm:2.30.1"],\
           ["moment-timezone", "npm:0.5.48"],\
-          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.20.0"],\
+          ["mysql2", "virtual:7473a2b7820d54bc9e09e43d07c4d6a37311d3c27cf8d3479124c02c830f39ea1edcd0240ea9cd8892e68b95c71dc40f3562d9221ee2fee4332c0f6b026a8253#npm:3.22.2"],\
           ["oracledb", null],\
           ["pg", null],\
           ["pg-connection-string", "npm:2.12.0"],\
