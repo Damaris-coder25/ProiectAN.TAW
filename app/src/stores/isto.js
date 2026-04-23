@@ -5,14 +5,23 @@ const API = "http://localhost:3000/factura"
 
 export const useIsto = defineStore("isto", {
   state: () => ({
-    istos: []
+    istos: [],
+    search: ""
   }),
+  getters: {
+    filteredIstos(state) {
+      if (!state.search) return state.istos
+      return state.istos.filter(isto =>
+        isto.title.toLowerCase().includes(state.search.toLowerCase())
+      )
+    }
+  },
   actions: {
     async fetchIstos() {
       const res = await axios.get(`${API}/get-all`)
       this.istos = res.data.map(f => ({
         id: f.id,
-        title: f.programare?.title || "",
+        title: f.title || f.programare?.title || "",
         total: f.total,
         date: f.date
       }))

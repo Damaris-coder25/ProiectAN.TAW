@@ -9,10 +9,6 @@ export const Angajat = sequelize.define(
       allowNull: false,
       validate: { notEmpty: true },
     },
-    rol: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     telefon: {
       type: DataTypes.STRING,
       allowNull: true,

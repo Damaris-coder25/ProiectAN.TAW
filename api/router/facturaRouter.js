@@ -6,11 +6,12 @@ const router = Router();
 
 router.get("/get-all", async (req, res) => {
   const facturi = await Factura.findAll({
-    include: [{ model: Programare }],
+    include: [{ model: Programare, paranoid: false }],
   });
   res.send(
     facturi.map((f) => ({
       id: f.dataValues.id,
+      title: f.dataValues.title,
       total: f.dataValues.total,
       date: f.dataValues.date,
       programare: f.dataValues.Programare,
@@ -60,8 +61,10 @@ router.post("/add-many", async (req, res) => {
 });
 
 router.put("/update-total", async (req, res) => {
-  const { id, total } = req.body;
-  await Factura.update({ total }, { where: { id } });
+  const { id, total, title } = req.body;
+  const fields = { total };
+  if (title !== undefined) fields.title = title;
+  await Factura.update(fields, { where: { id } });
   res.send({ success: true });
 });
 

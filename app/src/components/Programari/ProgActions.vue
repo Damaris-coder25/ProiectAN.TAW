@@ -1,11 +1,9 @@
 <script setup>
 import { useProg } from "@/stores/prog"
-import { useIsto } from "@/stores/isto"
 import { useRouter } from "vue-router"
 
 const router = useRouter()
 const progStore = useProg()
-const istoStore = useIsto()
 
 const props = defineProps({
   progId: {
@@ -21,6 +19,8 @@ const props = defineProps({
     required: true
   }
 })
+
+const esteManopera = props.progTitle.endsWith("manopera")
 
 const goToDetalii = () => {
   router.push(`/Detalii/${props.progId}`)
@@ -41,7 +41,7 @@ const goToGata = () => {
       <i class="bi bi-trash"></i>
     </button>
 
-    <button type="button" @click="goToDetalii"
+    <button v-if="esteManopera" type="button" @click="goToDetalii"
       class="h-6 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-yellow-100">
       Detalii
     </button>

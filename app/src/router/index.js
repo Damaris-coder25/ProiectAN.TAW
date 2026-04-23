@@ -20,6 +20,7 @@ import Manopera from "@/components/ProgramareNoua/Manopera.vue"
 import SuccesProgramare from "@/components/ProgramareNoua/SuccesProgramare.vue"
 import Clienti from "@/pages/Clienti.vue"
 import Istoric from "@/pages/Istoric.vue"
+import Angajat from "@/pages/Angajat.vue"
 
 const routes = [
   { path: "/", component: Connect },
@@ -41,7 +42,8 @@ const routes = [
   { path: "/Manopera", component: Manopera },
   { path: "/SuccesProgramare", component: SuccesProgramare },
   { path: "/Clienti", component: Clienti },
-  { path: "/Istoric", component: Istoric }
+  { path: "/Istoric", component: Istoric },
+  { path: "/Angajat", component: Angajat }
 ]
 
 const router = createRouter({

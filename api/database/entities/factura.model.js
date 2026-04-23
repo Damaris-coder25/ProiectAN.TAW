@@ -5,6 +5,10 @@ import { Programare } from "./programare.model.js";
 export const Factura = sequelize.define(
   "Factura",
   {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     total: {
       type: DataTypes.FLOAT,
       allowNull: false,

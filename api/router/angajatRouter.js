@@ -14,11 +14,6 @@ router.get("/get/:id", async (req, res) => {
   res.send(angajat.dataValues);
 });
 
-router.get("/get-by-rol/:rol", async (req, res) => {
-  const angajati = await Angajat.findAll({ where: { rol: req.params.rol } });
-  res.send(angajati.map((a) => a.dataValues));
-});
-
 router.post("/add", async (req, res) => {
   const { name, rol, telefon } = req.body;
   const angajat = await Angajat.create({ name, rol, telefon });
@@ -34,12 +29,6 @@ router.post("/add-many", async (req, res) => {
 router.put("/update-name", async (req, res) => {
   const { id, name } = req.body;
   await Angajat.update({ name }, { where: { id } });
-  res.send({ success: true });
-});
-
-router.put("/update-rol", async (req, res) => {
-  const { id, rol } = req.body;
-  await Angajat.update({ rol }, { where: { id } });
   res.send({ success: true });
 });
 

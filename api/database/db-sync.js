@@ -7,6 +7,7 @@ import "./entities/angajat.model.js";
 import "./entities/programare.model.js";
 import "./entities/factura.model.js";
 import "./entities/piesa.model.js";
+import "./entities/manopera.model.js";
 
 await sequelize.sync({ alter: true }).then(() => {
   console.log("FINISHED SUCCESS");

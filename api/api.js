@@ -8,6 +8,7 @@ import facturaRouter from "./router/facturaRouter.js";
 import angajatRouter from "./router/angajatRouter.js";
 import masinaRouter from "./router/masinaRouter.js";
 import piesaRouter from "./router/piesaRouter.js";
+import manoperaRouter from "./router/manoperaRouter.js";
 
 const app = express();
 const port = 3000;
@@ -26,6 +27,11 @@ app.use(function (req, res, next) {
     "X-Requested-With,content-type",
   );
   res.setHeader("Access-Control-Allow-Credentials", true);
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+
   next();
 });
 
@@ -36,7 +42,7 @@ app.use("/factura", facturaRouter);
 app.use("/angajat", angajatRouter);
 app.use("/masina", masinaRouter);
 app.use("/piesa", piesaRouter);
-
+app.use("/manopera", manoperaRouter);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

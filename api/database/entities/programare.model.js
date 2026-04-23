@@ -24,6 +24,11 @@ export const Programare = sequelize.define(
       type: DataTypes.DATEONLY,
       allowNull: true,
     },
+    manopereSelectate: {
+      type: DataTypes.JSON,
+      allowNull: true,
+      defaultValue: null,
+    },
   },
   {
     sequelize,

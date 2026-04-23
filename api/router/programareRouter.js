@@ -20,6 +20,7 @@ router.get("/get-all", async (req, res) => {
       done: Boolean(prog.dataValues.done),
       favorite: Boolean(prog.dataValues.favorite),
       data: prog.dataValues.data,
+      manopereSelectate: prog.dataValues.manopereSelectate || [],
       client: prog.dataValues.Client,
       masina: prog.dataValues.Masina,
     });
@@ -55,13 +56,22 @@ router.get("/get-favorite", async (req, res) => {
 
 // POST cu tranzactie - creeaza programare si factura impreuna
 router.post("/add", async (req, res) => {
-  const { title, ClientId, MasinaId, data, total } = req.body;
+  const { title, ClientId, MasinaId, data, total, manopereSelectate } =
+    req.body;
   let prog;
 
   const t = await sequelize.transaction();
   try {
     prog = await Programare.create(
-      { title, done: false, favorite: false, data, ClientId, MasinaId },
+      {
+        title,
+        done: false,
+        favorite: false,
+        data,
+        ClientId,
+        MasinaId,
+        manopereSelectate: manopereSelectate || null,
+      },
       { transaction: t },
     );
 
@@ -83,6 +93,7 @@ router.post("/add", async (req, res) => {
     done: false,
     favorite: false,
     data: prog.dataValues.data,
+    manopereSelectate: prog.dataValues.manopereSelectate || [],
   });
 });
 
@@ -97,6 +108,14 @@ router.put("/update-title", async (req, res) => {
   await Programare.update({ title: newTitle }, { where: { id } });
   const index = progs.findIndex((p) => p.id === id);
   if (index !== -1) progs[index].title = newTitle;
+  res.send({ success: true });
+});
+
+router.put("/update-manopere", async (req, res) => {
+  const { id, manopereSelectate } = req.body;
+  await Programare.update({ manopereSelectate }, { where: { id } });
+  const index = progs.findIndex((p) => p.id === id);
+  if (index !== -1) progs[index].manopereSelectate = manopereSelectate;
   res.send({ success: true });
 });
 

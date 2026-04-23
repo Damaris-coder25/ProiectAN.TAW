@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
   <IstoHeader />
   <div class="mt-5 ml-25">
-    <IstoBody v-for="(isto, index) in istoStore.istos" :key="index" :isto="isto"
+    <IstoBody v-for="(isto, index) in istoStore.filteredIstos" :key="index" :isto="isto"
       @update:isto:title="newTitle => istoStore.updateIstoTitle(isto.id, newTitle)" />
   </div>
   <IstoFooter />

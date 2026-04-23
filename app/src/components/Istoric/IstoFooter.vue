@@ -1,7 +1,9 @@
 <script setup>
 import { useIsto } from "@/stores/isto"
+import { useRouter } from "vue-router"
 
 const istoStore = useIsto()
+const router = useRouter()
 
 import { ref } from "vue"
 
@@ -30,43 +32,24 @@ const addNewIsto = () => {
 <template>
   <br />
   <div v-if="!isAddingIsto">
-    <button
-      @click="isAddingIsto = true"
-      type="button"
-      class="h-8 w-50 rounded-lg border border-black px-4 py-1 font-semibold shadow-md hover:bg-blue-100"
-    >
-      + Adauga Istoric
+    <button class="mr-4 h-8 w-20 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-gray-100"
+      @click="router.push('/meniu')">
+      Meniu
     </button>
   </div>
   <div v-else>
-    <input
-      v-model="newIstoTitle"
-      type="text"
-      placeholder="Introdu client"
-      class="ml-6 rounded border border-gray-300 px-2"
-    />
+    <input v-model="newIstoTitle" type="text" placeholder="Introdu client"
+      class="ml-6 rounded border border-gray-300 px-2" />
 
-    <input
-      v-model="newIstoTotal"
-      type="number"
-      placeholder="Introdu total"
-      class="ml-6 rounded border border-gray-300 px-2"
-    />
-    <input
-      v-model="newIstoDate"
-      type="date"
-      placeholder="Alege data"
-      class="ml-6 rounded border border-gray-300 px-2"
-    />
+    <input v-model="newIstoTotal" type="number" placeholder="Introdu total"
+      class="ml-6 rounded border border-gray-300 px-2" />
+    <input v-model="newIstoDate" type="date" placeholder="Alege data"
+      class="ml-6 rounded border border-gray-300 px-2" />
 
     <button type="button" class="ml-2 rounded bg-green-400 px-2 text-white" @click="addNewIsto">
       Save
     </button>
-    <button
-      type="button"
-      class="ml-2 rounded bg-red-400 px-2 text-white"
-      @click="isAddingIsto = false"
-    >
+    <button type="button" class="ml-2 rounded bg-red-400 px-2 text-white" @click="isAddingIsto = false">
       Cancel
     </button>
   </div>

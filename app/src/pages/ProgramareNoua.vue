@@ -33,7 +33,8 @@ const salveazaProgramare = async () => {
   if (!clientSelectat.value || !dataProgramare.value) return
 
   const client = clientStore.clients.find(c => c.id === Number(clientSelectat.value))
-  const title = client.name
+  const subfix = tipProgramare.value === "verificare" ? "verificare" : "manopera"
+  const title = `${client.name} - ${subfix}`
 
   if (tipProgramare.value === "verificare") {
     await progStore.addProg({

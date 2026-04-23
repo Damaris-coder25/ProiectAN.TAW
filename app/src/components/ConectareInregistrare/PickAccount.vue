@@ -9,7 +9,7 @@ const goToMeniu = () => {
 
 const titlu = ref("Alege contul pentru a continua!")
 
-const message = ref("blablabla45@gmail.com")
+const message = ref("ioneldamaris@gmail.com")
 </script>
 
 <template>
@@ -21,10 +21,8 @@ const message = ref("blablabla45@gmail.com")
   <br />
 
   <div class="mt-5 text-center">
-    <button
-      @click="goToMeniu"
-      class="h-12 w-72 rounded-lg border border-black px-6 py-2 font-semibold shadow-md hover:bg-blue-100"
-    >
+    <button @click="goToMeniu"
+      class="h-12 w-72 rounded-lg border border-black px-6 py-2 font-semibold shadow-md hover:bg-blue-100">
       {{ message }}
     </button>
   </div>

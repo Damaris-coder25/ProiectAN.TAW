@@ -11,7 +11,7 @@ const goToUtilizator = () => {
 </script>
 
 <template>
-  <div class="flex justify-end p-4">
+  <div class="flex justify-end p-2">
     <i @click="goToUtilizator" class="bi bi-person-fill text-4xl"></i>
   </div>
 
@@ -20,6 +20,7 @@ const goToUtilizator = () => {
   <ConnectButton app="Programari" route="/Programari" />
   <ConnectButton app="Programare noua" route="/ProgramareNoua" />
   <ConnectButton app="Clienti" route="/Clienti" />
+  <ConnectButton app="Angajați" route="/Angajat" />
   <ConnectButton app="Istoric" route="/Istoric" />
 </template>
 
