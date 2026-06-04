@@ -41,10 +41,10 @@ const goToGata = () => {
       <i class="bi bi-trash"></i>
     </button>
 
-    <button v-if="esteManopera" type="button" @click="goToDetalii"
+    <!-- <button v-if="esteManopera" type="button" @click="goToDetalii"
       class="h-6 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-yellow-100">
       Detalii
-    </button>
+    </button> -->
 
     <button type="button" @click="goToGata"
       class="h-6 rounded-lg border border-black px-2 font-semibold shadow-md hover:bg-blue-100">

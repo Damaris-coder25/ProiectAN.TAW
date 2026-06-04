@@ -4,4 +4,117 @@
 GET {{mainUrl}}
 ###
 #
-GET {{mainUrl}}/test
+GET {{mainUrl}}/angajat/1
+###
+#
+GET {{mainUrl}}/istoric/1
+###
+#   
+GET {{mainUrl}}/programari/1
+###
+#
+GET {{mainUrl}}/clienti/1
+###
+#
+GET {{mainUrl}}/manopera/1
+###
+#
+POST {{mainUrl}}/clienti
+Content-Type: application/json
+
+{
+    "nume": "Maria Ionescu",
+    "telefon": "0712345678"
+}
+### 
+#
+POST {{mainUrl}}/programari/22
+Content-Type: application/json
+
+{
+    "clientId": 1,
+    "manoperaId": 1,
+    "data": "2024-06-01T10:00:00Z"
+}
+###
+#
+POST {{mainUrl}}/istoric
+Content-Type: application/json
+
+{
+    "clientId": 1,
+    "manoperaId": 1,
+    "data": "2024-06-01T10:00:00Z"
+}
+###
+#
+POST {{mainUrl}}/angajat
+Content-Type: application/json
+
+{
+    "nume": "Ion Popescu",
+    "telefon": "0712345678"
+}
+###
+#
+POST {{mainUrl}}/manopera
+Content-Type: application/json
+
+{
+    "nume": "Schimbare ulei",
+    "pret": 150
+}
+###
+#
+PUT {{mainUrl}}/clienti/1
+Content-Type: application/json
+
+{
+    "nume": "Ana Ionescu",
+    "telefon": "0712345678",
+}
+###
+#
+PUT {{mainUrl}}/programari/22
+Content-Type: application/json
+
+{
+    "clientId": 1,
+    "manoperaId": 1,
+    "data": "2026-06-01T10:00:00Z"
+}
+###
+#
+PUT {{mainUrl}}/istoric/1
+Content-Type: application/json 
+
+{
+    "clientId": 1,
+    "angajatId": 1,
+    "manoperaId": 1,
+    "data": "2025-06-01T10:00:00Z"
+}
+###
+#
+PUT {{mainUrl}}/angajat/1
+Content-Type: application/json
+{
+    "nume": "Ionel Popescu",
+    "telefon": "0712345678"
+}
+###
+#
+PUT {{mainUrl}}/manopera/1
+Content-Type: application/json
+{
+    "nume": "Schimbare ulei",
+    "pret": 200
+}
+###
+#
+DELETE {{mainUrl}}/clienti/1
+###
+#
+DELETE {{mainUrl}}/programari/22
+###
+#
