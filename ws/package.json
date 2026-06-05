@@ -1,0 +1,10 @@
+{
+  "name": "ws",
+  "type": "module",
+  "scripts": {
+    "dev": "node ws-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.20.0"
+  }
+}

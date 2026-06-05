@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import cors from "cors";
+import authMiddleware from "./middleware/authMiddleware.js";
 import accessRouter from "./router/access.js";
 import clientRouter from "./router/clientRouter.js";
 import programareRouter from "./router/programareRouter.js";
@@ -14,35 +15,22 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-
-// CORS
-app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE",
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type",
-  );
-  res.setHeader("Access-Control-Allow-Credentials", true);
-
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
-  }
-
-  next();
-});
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  }),
+);
 
 app.use("/access", accessRouter);
-app.use("/client", clientRouter);
-app.use("/programare", programareRouter);
-app.use("/factura", facturaRouter);
-app.use("/angajat", angajatRouter);
-app.use("/masina", masinaRouter);
-app.use("/piesa", piesaRouter);
-app.use("/manopera", manoperaRouter);
+app.use("/client", authMiddleware, clientRouter);
+app.use("/programare", authMiddleware, programareRouter);
+app.use("/factura", authMiddleware, facturaRouter);
+app.use("/angajat", authMiddleware, angajatRouter);
+app.use("/masina", authMiddleware, masinaRouter);
+app.use("/piesa", authMiddleware, piesaRouter);
+app.use("/manopera", authMiddleware, manoperaRouter);
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

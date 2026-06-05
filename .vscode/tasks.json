@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "api:coverage",
+      "type": "shell",
+      "command": "cd /task/api && yarn vitest run --coverage",
+      "problemMatcher": [],
+      "group": "test"
+    },
+    {
+      "label": "api:auth-test",
+      "type": "shell",
+      "command": "cd /task/api && yarn vitest run controler/authControler.test.js",
+      "problemMatcher": [],
+      "group": "test"
+    }
+  ]
+}

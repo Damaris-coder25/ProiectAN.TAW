@@ -33,23 +33,30 @@ const routes = [
   { path: "/ParolaUitataCod", component: ParolaUitataCod },
   { path: "/ParolaNoua", component: ParolaNoua },
   { path: "/ParolaNouaSucces", component: ParolaNouaSucces },
-  { path: "/Meniu", component: Meniu },
-  { path: "/Utilizator", component: Utilizator },
-  { path: "/Programari", component: Programari },
-  { path: "/Gata/:id", component: Gata },
-  { path: "/ProgDetalii/:id", component: ProgDetalii },
-  { path: "/ProgramareNoua", component: ProgramareNoua },
-  { path: "/Manopera", component: Manopera },
-  { path: "/SuccesProgramare", component: SuccesProgramare },
-  { path: "/Clienti", component: Clienti },
-  { path: "/Istoric", component: Istoric },
-  { path: "/Angajat", component: Angajat }
+  { path: "/Meniu", component: Meniu, meta: { requiresAuth: true } },
+  { path: "/Utilizator", component: Utilizator, meta: { requiresAuth: true } },
+  { path: "/Programari", component: Programari, meta: { requiresAuth: true } },
+  { path: "/Gata/:id", component: Gata, meta: { requiresAuth: true } },
+  { path: "/ProgDetalii/:id", component: ProgDetalii, meta: { requiresAuth: true } },
+  { path: "/ProgramareNoua", component: ProgramareNoua, meta: { requiresAuth: true } },
+  { path: "/Manopera", component: Manopera, meta: { requiresAuth: true } },
+  { path: "/SuccesProgramare", component: SuccesProgramare, meta: { requiresAuth: true } },
+  { path: "/Clienti", component: Clienti, meta: { requiresAuth: true } },
+  { path: "/Istoric", component: Istoric, meta: { requiresAuth: true } },
+  { path: "/Angajat", component: Angajat, meta: { requiresAuth: true } },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
   linkActiveClass: "btn-primary"
+})
+
+router.beforeEach((to) => {
+  const isAuthenticated = Boolean(localStorage.getItem("token"))
+  if (to.path === "/" && isAuthenticated) return "/Meniu"
+  if (to.meta.requiresAuth && !isAuthenticated) return "/"
+  return true
 })
 
 export default router

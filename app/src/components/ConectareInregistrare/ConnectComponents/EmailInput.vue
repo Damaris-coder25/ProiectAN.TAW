@@ -11,13 +11,13 @@ function handleInput(event) {
 <template>
   <div class="mt-5 text-center">
     <br />
-    <p class="font-bold">Email</p>
+    <p class="font-bold">Username</p>
     <br />
     <input
-      type="email"
+      type="text"
       v-model="emailInput"
       @input="handleInput"
-      placeholder="Introdu email-ul..."
+      placeholder="Introdu username-ul..."
       class="h-10 w-70 rounded-lg border px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
     />
   </div>

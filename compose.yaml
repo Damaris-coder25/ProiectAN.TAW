@@ -35,6 +35,24 @@ services:
     working_dir: /task/api
     user: 1000:1000
 
+  ws:
+    build: .docker/ws
+    stdin_open: true
+    tty: true
+    container_name: ws.anproject
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: true
+      CHOKIDAR_INTERVAL: 100
+    ports:
+      - "7878:7878"
+    volumes:
+      - ./:/task
+      # exclude
+      # - /ws/.git/
+    working_dir: /task/ws
+    user: 1000:1000
+
   mysql:
     build: .docker/mysql
     container_name: mysql.anproject
@@ -63,6 +81,14 @@ services:
       PMA_PASSWORD: pjan
       UPLOAD_LIMIT: 250M
     restart: always
+
+  android-builder:
+    build: .docker/android-builder
+    container_name: android-builder.anproject
+    volumes:
+      - ./app:/workspace
+    profiles:
+      - android
 
 volumes:
   mysql_data:

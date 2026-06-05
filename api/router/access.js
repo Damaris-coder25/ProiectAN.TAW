@@ -1,16 +1,25 @@
-import { Router } from 'express';
+import { Router } from "express";
+import {
+  authController,
+  refreshController,
+} from "../controler/authControler.js";
 
 const router = Router();
 
-router.post('/login', (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  if (username === 'admin' && password === 'admin') {
-        res.send('Login successful');
-  } else {
-        res.send('Login failed');
+router.post("/login", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const result = await authController(username, password);
+    res.send(result);
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).send({ success: false, message: "Internal server error" });
   }
+});
 
-})
+router.post("/refresh", async (req, res) => {
+  const result = await refreshController(req.body.refreshToken);
+  res.status(result.success ? 200 : 401).send(result);
+});
 
 export default router;

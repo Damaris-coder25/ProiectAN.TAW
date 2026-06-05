@@ -9,9 +9,18 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build:android": "yarn build && yarn cap sync android",
+    "build:ios": "yarn build && yarn cap sync ios",
+    "cap:open:android": "yarn cap open android"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/cli": "^8.4.0",
+    "@capacitor/core": "^8.4.0",
+    "@capacitor/ios": "^8.4.0",
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.15.1",
     "bootstrap-icons": "^1.13.1",
@@ -26,16 +35,22 @@
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vitest/coverage-v8": "^4.1.8",
+    "@vue/compiler-dom": "^3.5.35",
+    "@vue/server-renderer": "^3.5.35",
+    "@vue/test-utils": "^2.4.11",
     "baseline-browser-mapping": "^2.9.17",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.7.0",
     "globals": "^17.0.0",
+    "happy-dom": "^20.10.1",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "vite": "^7.1.7",
     "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-vue-devtools": "^8.0.2",
+    "vitest": "^4.1.8",
     "vue-eslint-parser": "^10.2.0"
   },
   "packageManager": "yarn@4.10.3"
